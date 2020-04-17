@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development nodemon index",
-    "start:stage": "cross-env NODE_ENV=staging node index",
+    "start:stage": "node index",
     "start:prod": "cross-env NODE_ENV=production node index",
     "test": "cross-env NODE_ENV=development mocha test/**/*.js --exit"
   },
