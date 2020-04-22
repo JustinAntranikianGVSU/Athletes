@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
+console.log('Web Server up and running !!')
+console.log(process.env.NODE_ENV)
+
 require('custom-env').env(process.env.NODE_ENV, 'src/env')
 
 // set up middleware
