@@ -4,7 +4,6 @@ const path = require('path')
 //const router = express.Router()
 
 console.log('Web Server up and running !!')
-console.log(process.env.NODE_ENV)
 console.log(__dirname)
 
 require('custom-env').env(process.env.NODE_ENV, 'src/env')
@@ -15,9 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // athletes api routes
-app.use('/api/athletes', require('./src/api/athletesApi'))
-
-app.use('/api/athletes', require('./src/api/athletesApi'))
+app.use('/api/athletes', require(`${__dirname}/src/api/athletesApi`))
 
 app.get('/api/test', async (req, res) => {
   const resultContext = {hello: "blah"}
