@@ -5,6 +5,7 @@ const path = require('path')
 
 console.log('Web Server up and running !!')
 console.log(process.env.NODE_ENV)
+console.log(__dirname)
 
 require('custom-env').env(process.env.NODE_ENV, 'src/env')
 
