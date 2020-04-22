@@ -10,7 +10,7 @@ describe('Athlete Api Tests', () => {
 
   it('Get/:id returns athlete', (done) => {
     chai.request(server).get('/api/athletes/1').end((error, response) => {
-      response.should.have.status(200)
+      response.should.have.status(201)
       response.body.id.should.eq(1)
       response.body.name.should.eq('Justin Antranikian')
       done()
