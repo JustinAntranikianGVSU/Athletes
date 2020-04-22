@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // athletes api routes
-app.use('/api/athletes', require(`${__dirname}/src/api/athletesApi`))
+app.use('/api/athletes', require(`/home/site/wwwroot/src/api/athletesApi`))
 
 app.get('/api/test', async (req, res) => {
   const resultContext = {hello: "blah"}
