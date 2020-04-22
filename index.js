@@ -1,10 +1,6 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-//const router = express.Router()
-
-console.log('Web Server up and running !!')
-console.log(__dirname)
 
 require('custom-env').env(process.env.NODE_ENV, 'src/env')
 
